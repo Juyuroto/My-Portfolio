@@ -1,3 +1,66 @@
+# 📘 Projet Infrastructure Portfolio
+
+## 📝 Résumé du projet
+
+Ce projet consiste à mettre en place une infrastructure réseau complète comprenant :
+
+* un pare-feu **pfSense** avec WAN/LAN/DMZ,
+* un switch **Cisco manageable** configuré avec VLANs,
+* deux serveurs en **DMZ** (Portfolio + Backup),
+* un PC Admin isolé dans le LAN,
+* un site Portfolio hébergé localement et accessible via un nom de domaine.
+
+Cette documentation décrit toute la configuration : réseau, sécurité, serveurs, firewall, VLAN, mise en ligne du site.
+
+---
+
+## Installation (Guide rapide)
+
+### 1. Installer pfSense
+
+* Préparer une clé USB pfSense
+* Installer pfSense sur la machine dédiée
+* Configurer les interfaces :
+
+  * WAN = vers box FAI
+  * LAN = vers switch
+  * DMZ = vers switch
+
+### 2. Installer les serveurs (Ubuntu Server 22.04 recommandé)
+
+* Installer Ubuntu Server
+* Ajouter un utilisateur admin
+* Configurer IP fixe (DMZ)
+* Installer Apache/PHP ou Docker
+
+### 3. Configurer switch Cisco
+
+* Créer VLAN 10 / 20 / 30
+* Port trunk vers pfSense
+* Ports Access pour PC/Serveurs
+
+### 4. Déployer le site Portfolio
+
+* Copier fichiers → `/var/www/portfolio/`
+* Activer VirtualHost Apache
+* Ouvrir ports 80/443 sur pfSense
+
+---
+
+## Table des matières
+
+1. Introduction & Résumé
+2. Installation complète
+3. Architecture réseau (pfSense + Switch Cisco)
+4. VLANs & Sécurité
+5. Configuration des serveurs
+6. Synchronisation & Backup
+7. Docker (optionnel)
+8. HAProxy (optionnel)
+9. Mise en ligne du site
+
+---
+
 # Infrastructure Complete README
 
 ## Infra
