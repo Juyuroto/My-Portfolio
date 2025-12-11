@@ -45,6 +45,11 @@ Cette documentation décrit toute la configuration : réseau, sécurité, serveu
 - [Configuration réseau des serveurs (IP fixes)](#configuration-réseau-des-serveurs-ip-fixes)  
 - [Sécurisation des serveurs](#sécurisation-des-serveurs)
 
+## Pages
+
+- [README_PC_Admin.md](README_PC_Admin.md)
+- [README_Switch.md](README_Switch.md)
+
 ## Installation (Guide rapide)
 
 ### 1. Installer pfSense
@@ -545,6 +550,3 @@ sudo ufw enable
 #### Fail2Ban
 
 Protège SSH + Apache automatiquement.
-
-
-#### Pour la configuration du PC Admin : [README_PC_Admin.md](README_PC_Admin.md)
